@@ -8,9 +8,6 @@ const useBlogPosts = () => {
           edges {
             node {
               title
-              author {
-                name
-              }
               publishDate
               body {
                 childMarkdownRemark {
