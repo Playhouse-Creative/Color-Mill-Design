@@ -4,12 +4,12 @@ const palette = {
   },
   text: {
     primary: '#17252A',
-    secondary: '#17252A',
+    secondary: '#FFFFFF',
   },
   primary: {
     light: '#17252A',
-    main: '#17252A',
-    dark: '#17252A',
+    main: '#432F51',
+    dark: '#432F51',
     contrastText: '#fff',
   },
   secondary: {

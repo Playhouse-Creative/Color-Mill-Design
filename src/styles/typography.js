@@ -1,10 +1,10 @@
 const typography = typography => ({
-  fontFamily: 'Roboto',
+  fontFamily: 'montserrat',
   fontSize: 16,
   h1: {
     fontSize: typography.pxToRem(70),
     lineHeight: 1.1,
-    fontWeight: 800,
+    fontWeight: 700,
   },
   h2: {
     fontSize: typography.pxToRem(56),
@@ -12,9 +12,9 @@ const typography = typography => ({
     fontWeight: 500,
   },
   h3: {
-    fontSize: typography.pxToRem(28),
-    lineHeight: 1.1,
-    fontWeight: 300,
+    fontSize: typography.pxToRem(32),
+    lineHeight: 1.8,
+    fontWeight: 400,
   },
   body1: {
     fontSize: typography.pxToRem(16),

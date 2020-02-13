@@ -7,7 +7,7 @@ const styles = ({ app, breakpoints, typography }) => ({
     },
   },
   container: {
-    minHeight: '100vh',
+    minHeight: '70vh',
   },
   scrollFix: {
     marginRight: '-17px !important',
@@ -19,7 +19,7 @@ const styles = ({ app, breakpoints, typography }) => ({
     justifyContent: 'space-between',
     margin: '0 auto',
     minHeight: '100%',
-    padding: `${typography.pxToRem(16)} ${typography.pxToRem(48)}`,
+    //padding: `${typography.pxToRem(16)} ${typography.pxToRem(48)}`,
     transition: 'filter .5s, opacity .5s',
     boxSizing: 'border-box',
   },

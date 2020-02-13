@@ -51,7 +51,7 @@ const Animated = ({
 
 Animated.defaultProps = {
   animateWord: false,
-  animation: 'rubberBand',
+  animation: 'heartBeat',
   timeout: 600,
 };
 

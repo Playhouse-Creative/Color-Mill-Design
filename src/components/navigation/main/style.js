@@ -6,7 +6,7 @@ const styles = ({ palette, typography }) => ({
   navLink: {
     border: 'none',
     display: 'inline-block',
-    padding: `${typography.pxToRem(8)} ${typography.pxToRem(8)}`,
+    padding: `${typography.pxToRem(8)} ${typography.pxToRem(20)}`,
     textDecoration: 'none',
     color: palette.text.secondary,
   },

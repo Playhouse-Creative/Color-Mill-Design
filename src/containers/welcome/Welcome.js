@@ -1,26 +1,30 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Fade from '@material-ui/core/Fade';
+import Grid from '@material-ui/core/Grid';
 
-import { Animated } from 'components';
 
 import content from './content';
 
-const { tagline, title, subtitle } = content;
+const { title, subtitle } = content;
 
 const Welcome = () => (
-  <>
-    <Typography variant='h3' color='textPrimary'>
-      {tagline}
-    </Typography>
+  <><Grid container spacing={3} >
     <Fade in timeout={1000}>
-      <Typography variant='h1' color='textPrimary'>
-        <Animated>{title}</Animated>
+    <Grid item xs={12} sm={2} justify='left'>
+      <Typography variant='h1' color='textPrimary' display='inline'>
+        {title}
       </Typography>
+      </Grid>
     </Fade>
-    <Typography variant='h3' color='textPrimary'>
+    <Grid item xs={12} sm={5} justify='center'>
+      </Grid>
+    <Grid item xs={12} sm={5} justify='right'>
+    <Typography variant='h3' color='textPrimary' display='inline' >
       {subtitle}
     </Typography>
+    </Grid>
+    </Grid>
   </>
 );
 
