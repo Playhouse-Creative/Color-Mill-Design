@@ -10,7 +10,7 @@ type Props = {
 };
 
 const MainNavigation = ({ classes, options }: Props) => {
-  return (<ul>
+  return (<ul className={classes.menuContainer}>
     {options.map((link, i) => (<li className={classes.menuContainer} key={i}>
       <Link to={link.to} className={classes.navLink} activeClassName={classes.navLinkActive} exact={'true'}>
         <span>{link.text}</span>

@@ -24,7 +24,7 @@ const styles = ({ app, breakpoints, typography }) => ({
     boxSizing: 'border-box',
   },
   content: {
-    margin: 'auto',
+    margin: '5rem auto',
     maxWidth: app.maxWidth,
     width: '80%',
   },

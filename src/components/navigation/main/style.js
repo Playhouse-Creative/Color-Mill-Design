@@ -2,6 +2,8 @@ const styles = ({ palette, typography }) => ({
   menuContainer: {
     borderRadius: typography.pxToRem(4),
     display: 'inline-block',
+    margin: 0
+  
   },
   navLink: {
     border: 'none',
@@ -9,9 +11,10 @@ const styles = ({ palette, typography }) => ({
     padding: `${typography.pxToRem(8)} ${typography.pxToRem(20)}`,
     textDecoration: 'none',
     color: palette.text.secondary,
+    margin: 0
   },
   navLinkActive: {
-    borderBottom: `${typography.pxToRem(2)} solid ${palette.primary.main}`,
+    borderBottom: 0,
   },
 });
 

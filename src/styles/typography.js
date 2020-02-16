@@ -1,13 +1,13 @@
 const typography = typography => ({
-  fontFamily: 'roboto',
+  fontFamily: 'nunito sans',
   fontSize: 16,
   h1: {
-    fontSize: typography.pxToRem(70),
+    fontSize: typography.pxToRem(60),
     lineHeight: 1.1,
     fontWeight: 700,
   },
   h2: {
-    fontSize: typography.pxToRem(56),
+    fontSize: typography.pxToRem(50),
     lineHeight: 1.1,
     fontWeight: 500,
   },

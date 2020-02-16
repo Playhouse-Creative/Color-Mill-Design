@@ -15,7 +15,7 @@ const styles = ({ palette, typography }) => ({
     display: 'inline-block',
     padding: `${typography.pxToRem(8)} 0`,
     textDecoration: 'none',
-    color: palette.text.secondary,
+    color: 'white',
   },
   navLinkActive: {
     fontWeight: 500,

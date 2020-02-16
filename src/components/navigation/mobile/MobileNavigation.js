@@ -19,16 +19,16 @@ const useStyles = makeStyles({
     border: 'none',
     margin: '3rem',
     textDecoration: 'none',
-    color: 'black',
-    fontSize: '1.2rem',
+    color: 'primary',
+    fontSize: '1.1rem',
     fontWeight : '500'
   },
   navLinkActive :{
     border: 'none',
     margin: '3rem',
     textDecoration: 'none',
-    color: 'black',
-    fontSize: '1.2rem',
+    color: 'secondary',
+    fontSize: '1.1rem',
     fontWeight : '500'
   }
 });

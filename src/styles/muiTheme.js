@@ -33,7 +33,7 @@ muiTheme.overrides = {
     },
     h1: {
       [muiTheme.breakpoints.down('sm')]: {
-        fontSize: muiTheme.typography.pxToRem(56),
+        fontSize: muiTheme.typography.pxToRem(50),
       },
       [muiTheme.breakpoints.down('xs')]: {
         fontSize: muiTheme.typography.pxToRem(40),

@@ -4,10 +4,9 @@ const styles = ({ palette, typography }) => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
     listStyle: 'none',
-    margin: 0,
-    padding: 0,
     position: 'relative',
     zIndex: 10,
+    margin: 0
   },
 });
 
