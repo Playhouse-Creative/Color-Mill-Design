@@ -1,5 +1,5 @@
 const typography = typography => ({
-  fontFamily: 'montserrat',
+  fontFamily: 'roboto',
   fontSize: 16,
   h1: {
     fontSize: typography.pxToRem(70),

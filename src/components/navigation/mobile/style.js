@@ -6,7 +6,8 @@ const styles = ({ palette, typography }) => ({
     position: 'absolute',
     top: typography.pxToRem(16),
     right: typography.pxToRem(-8),
-    textAlign: 'right',
+    textAlign: 'center',
+    textDecoration: 'none',
     padding: `${typography.pxToRem(16)} ${typography.pxToRem(8)}`,
   },
   navLink: {
@@ -18,6 +19,7 @@ const styles = ({ palette, typography }) => ({
   },
   navLinkActive: {
     fontWeight: 500,
+    textDecoration: 'none',
   },
 });
 

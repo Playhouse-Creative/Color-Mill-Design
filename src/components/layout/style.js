@@ -19,14 +19,14 @@ const styles = ({ app, breakpoints, typography }) => ({
     justifyContent: 'space-between',
     margin: '0 auto',
     minHeight: '100%',
-    //padding: `${typography.pxToRem(16)} ${typography.pxToRem(48)}`,
+    padding: 'none',
     transition: 'filter .5s, opacity .5s',
     boxSizing: 'border-box',
   },
   content: {
     margin: 'auto',
     maxWidth: app.maxWidth,
-    width: '100%',
+    width: '80%',
   },
   background: {
     backgroundImage: ``,

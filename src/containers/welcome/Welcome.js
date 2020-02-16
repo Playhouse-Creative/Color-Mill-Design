@@ -11,15 +11,15 @@ const { title, subtitle } = content;
 const Welcome = () => (
   <><Grid container spacing={3} >
     <Fade in timeout={1000}>
-    <Grid item xs={12} sm={2} justify='left'>
+    <Grid item xs={12} sm={2} >
       <Typography variant='h1' color='textPrimary' display='inline'>
         {title}
       </Typography>
       </Grid>
     </Fade>
-    <Grid item xs={12} sm={5} justify='center'>
+    <Grid item xs={12} sm={5} >
       </Grid>
-    <Grid item xs={12} sm={5} justify='right'>
+    <Grid item xs={12} sm={5} >
     <Typography variant='h3' color='textPrimary' display='inline' >
       {subtitle}
     </Typography>

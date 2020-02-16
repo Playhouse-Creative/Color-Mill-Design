@@ -5,7 +5,7 @@ import withWidth from '@material-ui/core/withWidth';
 import { compose, isMobileView } from 'utils';
 
 import MainNavigation from './main';
-import MenuDrawer from './mobile';
+import MobileNavigation from './mobile';
 import options from './content';
 import styles from './style';
 
@@ -20,10 +20,11 @@ const Navigation = ({ classes, width }: Props) => {
   return (
     <div className={classes.container}>
       {isMobileView(width) ? (
-        <MenuDrawer
-           options={options}
+        <MobileNavigation
+          options={options}
           open={open}
-          onClick={() => setOpen(!open)}
+          onClick={() => setOpen(!open)
+          }
         />
       ) : (
         <MainNavigation options={options} />
