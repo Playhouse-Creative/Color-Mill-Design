@@ -15,7 +15,7 @@ const useGalleryImages = () => {
                         }
                         animatedImage{
                             fluid(maxWidth: 960) {
-                  ...GatsbyContentfulFluid_withWebp
+                  ...GatsbyContentfulFluid
                 }
                         }
                     }
