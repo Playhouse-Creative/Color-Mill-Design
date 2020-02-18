@@ -1,8 +1,8 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
-import Img from 'gatsby-image';
+//import Img from 'gatsby-image';
 // import Grid from '@material-ui/core/Grid';
- import Fade from '@material-ui/core/Fade'
+import Fade from '@material-ui/core/Fade'
 
 import styles from './style';
 
@@ -11,12 +11,12 @@ type Props = {
     data: Object,
 };
 
-const GalleryImage = ({classes, data}: Props) => (
+const AnimatedGalleryImage = ({classes, data}: Props) => (
     <Fade in timeout={500}>
     <div className={classes.container}>
-    {data.stillImage ? <Img fluid={data.stillImage.fluid}/> : null}    
+    {data.animatedImage ? <img src={data.animatedImage} alt={data.animatedImage.id}/> : null}    
     </div>
     </Fade>
 );
 
-export default withStyles(styles)(GalleryImage)
+export default withStyles(styles)(AnimatedGalleryImage)

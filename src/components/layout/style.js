@@ -17,7 +17,7 @@ const styles = ({ app, breakpoints, typography }) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    margin: '0 auto',
+    margin: 'auto',
     minHeight: '100%',
     padding: 'none',
     transition: 'filter .5s, opacity .5s',
@@ -26,7 +26,7 @@ const styles = ({ app, breakpoints, typography }) => ({
   content: {
     margin: '5rem auto',
     maxWidth: app.maxWidth,
-    width: '80%',
+    width: '90%',
   },
   background: {
     backgroundImage: ``,

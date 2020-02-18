@@ -1,10 +1,10 @@
 const styles = ({ app, typography }) => ({
   container: {
     display: 'flex',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     alignItems: 'center',
     margin: `${typography.pxToRem(0)}`,
-    padding: '1.5rem 1.5rem 1.5rem 1.5rem',
+    padding: '1.5rem 3rem 1.5rem 3rem',
     maxWidth: 'app.maxWidth',
     width: '100%',
     background: '#432F51',

@@ -14,9 +14,8 @@ const useGalleryImages = () => {
                 }
                         }
                         animatedImage{
-                            fluid(maxWidth: 960) {
-                  ...GatsbyContentfulFluid
-                }
+                            contentful_id
+                              
                         }
                     }
                 }
