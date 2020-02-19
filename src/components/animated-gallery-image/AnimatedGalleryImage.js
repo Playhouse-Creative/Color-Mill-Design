@@ -14,7 +14,7 @@ type Props = {
 const AnimatedGalleryImage = ({classes, data}: Props) => (
     <Fade in timeout={500}>
     <div className={classes.container}>
-    {data.animatedImage ? <img src={data.animatedImage} alt={data.animatedImage.id}/> : null}    
+    {data.animatedImage ? <video src={data.animatedImage} alt={data.animatedImage.name}/> : null}    
     </div>
     </Fade>
 );
