@@ -1,16 +1,18 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
-import Grid from '@material-ui/core/Grid'
-import { Link } from 'gatsby'
-import BourbonVideo from 'images/Animated-Bourbon-Bottle.webm'
-import BourbonStill from 'images/Animated Bourbon Bottle Still Frame.jpg'
-import UMSPVideo from 'images/USMP-Animated logo.png'
-import UMSPStill from 'images/UMSP_Logo_Coloro.jpg'
+import Grid from '@material-ui/core/Grid';
+import { Link } from 'gatsby';
+import BourbonVideo from 'images/Animated-Whiskey.mp4';
+import BourbonStill from 'images/Animated-Whiskey-Poster.jpg';
+import UMSPVideo from 'images/Animated-UMSP.mp4';
+import UMSPStill from 'images/Animated-UMSP-Poster.jpg';
+import LogosVideo from 'images/Animated-Logos.mp4';
+import LogosStill from 'images/Animated-Logos-Poster.jpg';
+
 import { GalleryImage, AnimatedGalleryImage } from 'components';
 
 import useGalleryImages from './useGalleryImages';
 import styles from './style';
-
 
 // type Props = {
 //   classes: Object,
@@ -30,7 +32,7 @@ import styles from './style';
 //   return (
 //     <div className={classes.container}>
 //     <Grid container spacing={2}  >
-    
+
 //       {allContentfulGalleryImage.edges.map(({ node }, index) => (
 //         <Grid item xs={12} md={6} >
 //           <div className={classes.animatedBackground} >
@@ -43,7 +45,7 @@ import styles from './style';
 //         </div>
 //         </Grid>
 //       ))}
-      
+
 //       </Grid>
 //       </div>
 //   );
@@ -56,27 +58,72 @@ type Props = {
 const GalleryImageList = ({ classes }: Props) => {
   const { allContentfulGalleryImage } = useGalleryImages();
 
-return (
+  return (
     <div className={classes.container}>
-    <Grid container spacing={2}>
-    <Grid item xs={12} md={6}>
-    <div className={classes.animatedBackground} >
-    <Link to='./blog/'>
-    <video width='100%' autoplay loop poster={BourbonStill} onMouseOver={e => e.target.play()}
-              onMouseOut={e => e.target.load()}><source src={BourbonVideo}/></video>
-    </Link>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={6}>
+          <div className={classes.animatedBackground}>
+            <Link to='./blog/'>
+              <video
+                width='100%'
+                autoplay
+                loop
+                poster={BourbonStill}
+                onMouseOver={e => e.target.play()}
+                onMouseOut={e => e.target.pause()}>
+                <source src={BourbonVideo} />
+              </video>
+            </Link>
+          </div>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <div className={classes.animatedBackground}>
+            <Link to='./blog/'>
+              <video
+                width='100%'
+                autoplay
+                loop
+                poster={UMSPStill}
+                onMouseOver={e => e.target.play()}
+                onMouseOut={e => e.target.load()}>
+                <source src={UMSPVideo} />
+              </video>
+            </Link>
+          </div>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <div className={classes.animatedBackground}>
+            <Link to='./blog/'>
+              <video
+                width='100%'
+                autoplay
+                loop
+                poster={UMSPStill}
+                onMouseOver={e => e.target.play()}
+                onMouseOut={e => e.target.load()}>
+                <source src={UMSPVideo} />
+              </video>
+            </Link>
+          </div>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <div className={classes.animatedBackground}>
+            <Link to='./blog/'>
+              <video
+                width='100%'
+                autoplay
+                loop
+                poster={LogosStill}
+                onMouseOver={e => e.target.play()}
+                onMouseOut={e => e.target.load()}>
+                <source src={LogosVideo} />
+              </video>
+            </Link>
+          </div>
+        </Grid>
+      </Grid>
     </div>
-    </Grid>
-    <Grid item xs={12} md={6}>
-    <div className={classes.animatedBackground} >
-    <Link to='./blog/'>
-    <video width='100%' autoplay loop poster={UMSPStill} onMouseOver={e => e.target.play()}
-              onMouseOut={e => e.target.load()}><source src={UMSPVideo}/></video>
-    </Link>
-    </div>
-    </Grid>
-    </Grid>
-    
-    </div>)}
+  );
+};
 
 export default withStyles(styles)(GalleryImageList);

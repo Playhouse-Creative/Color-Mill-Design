@@ -22,6 +22,7 @@ const styles = ({ app, breakpoints, typography }) => ({
     padding: 'none',
     transition: 'filter .5s, opacity .5s',
     boxSizing: 'border-box',
+    background: '#E8E8E8',
   },
   content: {
     margin: '5rem auto',
