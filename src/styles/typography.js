@@ -4,17 +4,17 @@ const typography = typography => ({
   h1: {
     fontSize: typography.pxToRem(60),
     lineHeight: 1.1,
-    fontWeight: 700,
+    fontWeight: 500,
   },
   h2: {
     fontSize: typography.pxToRem(50),
     lineHeight: 1.1,
-    fontWeight: 500,
+    fontWeight: 300,
   },
   h3: {
     fontSize: typography.pxToRem(32),
     lineHeight: 1.8,
-    fontWeight: 400,
+    fontWeight: 300,
   },
   body1: {
     fontSize: typography.pxToRem(16),

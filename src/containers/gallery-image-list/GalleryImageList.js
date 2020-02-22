@@ -2,8 +2,10 @@ import React from 'react';
 import { withStyles } from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid'
 import { Link } from 'gatsby'
-import BourbonVideo from 'images/Color Mill Design 3 Frames.mp4'
+import BourbonVideo from 'images/Animated-Bourbon-Bottle.webm'
 import BourbonStill from 'images/Animated Bourbon Bottle Still Frame.jpg'
+import UMSPVideo from 'images/USMP-Animated logo.png'
+import UMSPStill from 'images/UMSP_Logo_Coloro.jpg'
 import { GalleryImage, AnimatedGalleryImage } from 'components';
 
 import useGalleryImages from './useGalleryImages';
@@ -60,8 +62,16 @@ return (
     <Grid item xs={12} md={6}>
     <div className={classes.animatedBackground} >
     <Link to='./blog/'>
-    <video width ='fluid' autoplay loop poster={BourbonStill} onMouseOver={e => e.target.play()}
-              onMouseOut={e => e.target.load()}><source src={BourbonVideo}/>></video>
+    <video width='100%' autoplay loop poster={BourbonStill} onMouseOver={e => e.target.play()}
+              onMouseOut={e => e.target.load()}><source src={BourbonVideo}/></video>
+    </Link>
+    </div>
+    </Grid>
+    <Grid item xs={12} md={6}>
+    <div className={classes.animatedBackground} >
+    <Link to='./blog/'>
+    <video width='100%' autoplay loop poster={UMSPStill} onMouseOver={e => e.target.play()}
+              onMouseOut={e => e.target.load()}><source src={UMSPVideo}/></video>
     </Link>
     </div>
     </Grid>

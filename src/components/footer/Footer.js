@@ -11,7 +11,7 @@ const Footer = ({ classes }: Props) => (
   <footer className={classes.container}>
     © {new Date().getFullYear()}, Built with
     {` `}
-    <a href='https://www.gatsbyjs.org'>Gatsby</a>
+    <a color='white' href='https://www.gatsbyjs.org'>Gatsby</a>
   </footer>
 );
 
