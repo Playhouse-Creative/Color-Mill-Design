@@ -1,29 +1,29 @@
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby';
 
 const useGalleryImages = () => {
     const data = useStaticQuery(
         graphql`
-        query {
-            allContentfulGalleryImage{
-                edges{
-                    node{
-                        title
-                        stillImage{
-                            fluid(maxWidth: 960) {
-                  ...GatsbyContentfulFluid_withWebp
-                }
-                        }
-                        animatedImage{
-                            contentful_id
-                              
-                        }
-                    }
-                }
-            }
+        query MyQuery($id: ID!) {
+  contentfulGalleryImage {
+    id
+  }
+  allContentfulGalleryImage(filter: {stillImage: {contentful_id: $id }}) {
+    edges {
+      node {
+        stillImage {
+          fluid {
+            srcWebp
+          }
         }
+      }
+    }
+  }
+}
+
     `
     );
     return data;
+    
 };
 
 export default useGalleryImages;

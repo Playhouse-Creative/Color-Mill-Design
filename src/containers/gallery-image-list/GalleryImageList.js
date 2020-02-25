@@ -56,7 +56,7 @@ type Props = {
 };
 
 const GalleryImageList = ({ classes }: Props) => {
-  const { allContentfulGalleryImage } = useGalleryImages();
+  //const { allContentfulGalleryImage } = useGalleryImages();
 
   return (
     <div className={classes.container}>
@@ -66,9 +66,9 @@ const GalleryImageList = ({ classes }: Props) => {
             <Link to='./blog/'>
               <video
                 width='100%'
-                autoplay
                 loop
-                poster={BourbonStill}
+                muted
+                poster={useGalleryImages("58X0DMtiWDfT1Icq7owo9w")}
                 onMouseOver={e => e.target.play()}
                 onMouseOut={e => e.target.pause()}>
                 <source src={BourbonVideo} />
@@ -81,8 +81,8 @@ const GalleryImageList = ({ classes }: Props) => {
             <Link to='./blog/'>
               <video
                 width='100%'
-                autoplay
                 loop
+                muted
                 poster={UMSPStill}
                 onMouseOver={e => e.target.play()}
                 onMouseOut={e => e.target.load()}>
@@ -96,8 +96,8 @@ const GalleryImageList = ({ classes }: Props) => {
             <Link to='./blog/'>
               <video
                 width='100%'
-                autoplay
                 loop
+                muted
                 poster={UMSPStill}
                 onMouseOver={e => e.target.play()}
                 onMouseOut={e => e.target.load()}>
@@ -111,11 +111,11 @@ const GalleryImageList = ({ classes }: Props) => {
             <Link to='./blog/'>
               <video
                 width='100%'
-                autoplay
                 loop
+                muted
                 poster={LogosStill}
                 onMouseOver={e => e.target.play()}
-                onMouseOut={e => e.target.load()}>
+                onMouseOut={e => e.target.pause()}>
                 <source src={LogosVideo} />
               </video>
             </Link>
