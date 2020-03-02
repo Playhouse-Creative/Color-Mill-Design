@@ -8,6 +8,8 @@ import UMSPVideo from 'images/Animated-UMSP.mp4';
 import UMSPStill from 'images/Animated-UMSP-Poster.jpg';
 import LogosVideo from 'images/Animated-Logos.mp4';
 import LogosStill from 'images/Animated-Logos-Poster.jpg';
+import NoyoVideo from 'images/Animated-Noyo.mp4'
+import NoyoStill from 'images/Animated-Noyo-Poster.jpg'
 
 import { GalleryImage, AnimatedGalleryImage } from 'components';
 
@@ -83,10 +85,10 @@ const GalleryImageList = ({ classes }: Props) => {
                 width='100%'
                 loop
                 muted
-                poster={UMSPStill}
+                poster={NoyoStill}
                 onMouseOver={e => e.target.play()}
                 onMouseOut={e => e.target.load()}>
-                <source src={UMSPVideo} />
+                <source src={NoyoVideo} />
               </video>
             </Link>
           </div>
