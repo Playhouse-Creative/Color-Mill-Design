@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
 import { Link } from 'gatsby';
+//import Img from 'gatsby-image';
 import BourbonVideo from 'images/Animated-Whiskey.mp4';
 import BourbonStill from 'images/Animated-Whiskey-Poster.jpg';
 import UMSPVideo from 'images/Animated-UMSP.mp4';
@@ -11,47 +12,7 @@ import LogosStill from 'images/Animated-Logos-Poster.jpg';
 import NoyoVideo from 'images/Animated-Noyo.mp4'
 import NoyoStill from 'images/Animated-Noyo-Poster.jpg'
 
-import { GalleryImage, AnimatedGalleryImage } from 'components';
-
-import useGalleryImages from './useGalleryImages';
 import styles from './style';
-
-// type Props = {
-//   classes: Object,
-// };
-
-// const GalleryImageList = ({ classes }: Props) => {
-//   const { allContentfulGalleryImage } = useGalleryImages();
-
-//   const invisible=(e) => {
-//     e.target.style.opacity = '0'
-//   }
-
-//   const visible=(e) => {
-//     e.target.style.opacity = '1'
-//   }
-
-//   return (
-//     <div className={classes.container}>
-//     <Grid container spacing={2}  >
-
-//       {allContentfulGalleryImage.edges.map(({ node }, index) => (
-//         <Grid item xs={12} md={6} >
-//           <div className={classes.animatedBackground} >
-//         <Link background={<video poster ={<GalleryImage/>}><source src={BourbonVideo} type='video/mp4'/></video>}>
-//         <div role="navigation" onMouseEnter={invisible}
-//         onMouseLeave={visible} >
-//         <GalleryImage key={index} data={node}/>
-//         </div>
-//         </Link>
-//         </div>
-//         </Grid>
-//       ))}
-
-//       </Grid>
-//       </div>
-//   );
-// };
 
 type Props = {
   classes: Object,
@@ -70,9 +31,11 @@ const GalleryImageList = ({ classes }: Props) => {
                 width='100%'
                 loop
                 muted
-                poster={useGalleryImages("58X0DMtiWDfT1Icq7owo9w")}
+                poster={BourbonStill}
                 onMouseOver={e => e.target.play()}
-                onMouseOut={e => e.target.pause()}>
+                onFocus={e => e.target.play()}
+                onMouseOut={e => e.target.pause()}
+                onBlur={e => e.target.pause()}>
                 <source src={BourbonVideo} />
               </video>
             </Link>
@@ -87,7 +50,9 @@ const GalleryImageList = ({ classes }: Props) => {
                 muted
                 poster={NoyoStill}
                 onMouseOver={e => e.target.play()}
-                onMouseOut={e => e.target.load()}>
+                onFocus={e => e.target.play()}
+                onMouseOut={e => e.target.load()}
+                onBlur={e => e.target.load()}>
                 <source src={NoyoVideo} />
               </video>
             </Link>
@@ -102,7 +67,9 @@ const GalleryImageList = ({ classes }: Props) => {
                 muted
                 poster={UMSPStill}
                 onMouseOver={e => e.target.play()}
-                onMouseOut={e => e.target.load()}>
+                onFocus={e => e.target.play()}
+                onMouseOut={e => e.target.load()}
+                onBlur={e => e.target.load()}>
                 <source src={UMSPVideo} />
               </video>
             </Link>
@@ -117,7 +84,9 @@ const GalleryImageList = ({ classes }: Props) => {
                 muted
                 poster={LogosStill}
                 onMouseOver={e => e.target.play()}
-                onMouseOut={e => e.target.pause()}>
+                onFocus={e => e.target.play()}
+                onMouseOut={e => e.target.pause()}
+                onBlur={e => e.target.load()}>
                 <source src={LogosVideo} />
               </video>
             </Link>
