@@ -2,15 +2,16 @@ import React from 'react';
 import { withStyles } from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
 import { Link } from 'gatsby';
-//import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
 import BourbonVideo from 'images/Animated-Whiskey.mp4';
 import BourbonStill from 'images/Animated-Whiskey-Poster.jpg';
 import UMSPVideo from 'images/Animated-UMSP.mp4';
 import UMSPStill from 'images/Animated-UMSP-Poster.jpg';
 import LogosVideo from 'images/Animated-Logos.mp4';
 import LogosStill from 'images/Animated-Logos-Poster.jpg';
-import NoyoVideo from 'images/Animated-Noyo.mp4'
-import NoyoStill from 'images/Animated-Noyo-Poster.jpg'
+import NoyoVideo from 'images/Animated-Noyo.mp4';
+import NoyoStill from 'images/Animated-Noyo-Poster.jpg';
+// import useGalleryImages from'./useGalleryImages';
 
 import styles from './style';
 
@@ -19,7 +20,7 @@ type Props = {
 };
 
 const GalleryImageList = ({ classes }: Props) => {
-  //const { allContentfulGalleryImage } = useGalleryImages();
+  // const { allContentfulGalleryImage } = useGalleryImages();
 
   return (
     <div className={classes.container}>
@@ -31,10 +32,13 @@ const GalleryImageList = ({ classes }: Props) => {
                 width='100%'
                 loop
                 muted
-                poster={BourbonStill}
+                track ='none'
+                poster= {BourbonStill}
                 onMouseOver={e => e.target.play()}
+                onTouchStart={e => e.target.play()}
                 onFocus={e => e.target.play()}
                 onMouseOut={e => e.target.pause()}
+                onTouchEnd={e => e.target.pause()}
                 onBlur={e => e.target.pause()}>
                 <source src={BourbonVideo} />
               </video>
@@ -50,8 +54,10 @@ const GalleryImageList = ({ classes }: Props) => {
                 muted
                 poster={NoyoStill}
                 onMouseOver={e => e.target.play()}
+                onTouchStart={e => e.target.play()}
                 onFocus={e => e.target.play()}
                 onMouseOut={e => e.target.load()}
+                onTouchEnd={e => e.target.load()}
                 onBlur={e => e.target.load()}>
                 <source src={NoyoVideo} />
               </video>
@@ -67,8 +73,10 @@ const GalleryImageList = ({ classes }: Props) => {
                 muted
                 poster={UMSPStill}
                 onMouseOver={e => e.target.play()}
+                onTouchStart={e => e.target.play()}
                 onFocus={e => e.target.play()}
                 onMouseOut={e => e.target.load()}
+                onTouchEnd={e => e.target.load()}
                 onBlur={e => e.target.load()}>
                 <source src={UMSPVideo} />
               </video>
@@ -84,8 +92,10 @@ const GalleryImageList = ({ classes }: Props) => {
                 muted
                 poster={LogosStill}
                 onMouseOver={e => e.target.play()}
+                onTouchStart={e => e.target.play()}
                 onFocus={e => e.target.play()}
                 onMouseOut={e => e.target.pause()}
+                onTouchEnd={e => e.target.pause()}
                 onBlur={e => e.target.load()}>
                 <source src={LogosVideo} />
               </video>

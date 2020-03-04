@@ -1,73 +1,35 @@
-import {  graphql, StaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
-import React from 'react'
+import {  graphql, useStaticQuery } from 'gatsby';
 
-const renderImage = (file) => {
-  return (
-    <Img fluid={file.node.childImageSharp.fluid}/>
-  )
-}
 
-const useGalleryImages = (props) => {
-
-  return <StaticQuery
-    query={graphql`
-      query {
-        contentfulGalleryImage {
-               id
-             }
-             allContentfulGalleryImage(filter: {stillImage: {contentful_id: { eq: "images"} }}) {
-               edges {
-                 node {
-                   stillImage {
-               
-                       fluid(maxWidth: 960) {
-            ...GatsbyContentfulFluid_withWebp
-                     }
-                   }
-                 }
-               }
+const useGalleryImages = () => {
+    const data = useStaticQuery(
+        graphql`
+        query {
+          allContentfulGalleryImage(filter: {contentful_id: {eq: "58X0DMtiWDfT1Icq7owo9w"}}) {
+            edges {
+              node {
+                stillImage {
+                  fluid(maxWidth: 900) {
+                    aspectRatio
+                    base64
+                    sizes
+                    src
+                    srcSet
+                  }
+                  file {
+                    url
+                    fileName
+                    contentType
+                  }
+                }
               }
             }
-           `}
-          render={(data) => {
-            const image = data.allContentfulImages.find(
-              image => image.node.relativePath === props.jpg
-            )
-            return(renderImage(image))
-          }}
-          />
+          }
         }
-
-
-
-
-
-
-
-//     const data = useStaticQuery(
-//         graphql`
-//         query MyQuery($id: ID!) {
-//   contentfulGalleryImage {
-//     id
-//   }
-//   allContentfulGalleryImage(filter: {stillImage: {contentful_id: $id }}) {
-//     edges {
-//       node {
-//         stillImage {
-//           fluid {
-//             srcWebp
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-//     `
-//     );
-//     return data;
+        `
+);
+    return data;
     
-// };
+};
 
 export default useGalleryImages;

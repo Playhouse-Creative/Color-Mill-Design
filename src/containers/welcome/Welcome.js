@@ -20,7 +20,7 @@ const Welcome = () => (
     <Grid item xs={6} sm={5} md={5}>
       </Grid>
     <Grid item xs={12} sm={6} md={4}>
-    <Typography variant='h4' color='textPrimary' display='inline' >
+    <Typography variant='h4' color='textPrimary' display='inline' align="right" >
       {subtitle}
     </Typography>
     </Grid>
