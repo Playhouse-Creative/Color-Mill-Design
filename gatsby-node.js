@@ -20,39 +20,85 @@ exports.createSchemaCustomization = ({ actions }) => {
   createTypes(typeDefs)
 }
 const path = require('path')
-
-exports.createPages = ({graphql, boundActionCreators}) => {
-  const {createPage} = boundActionCreators
-  return new Promise((resolve, reject) => {
-    const storeTemplate = path.resolve('src/templates/caseStudy.js')
-    resolve(
-      graphql(`
-        {
-          allContentfulCaseStudy (limit:100) {
-            edges {
-              node {
-                id
-                name
-                slug
-              }
-            }
+const { createFilePath } = require(`gatsby-source-filesystem`)
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `contentfulCaseStudy`) {
+    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
+  }
+}
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const result = await graphql(`
+    query {
+      allContentfulCaseStudy {
+        edges {
+          node {
+            slug
           }
         }
-      `).then((result) => {
-        if (result.errors) {
-          reject(result.errors)
-        }
-        result.data.allContentfulCaseStudy.edges.forEach((edge) => {
-          createPage ({
-            path: edge.node.slug,
-            component: caseStudyTemplate,
-            context: {
-              slug: edge.node.slug
-            }
-          })
-        })
-        return
-      })
-    )
+      }
+    }
+  `)
+  result.data.allContentfulCaseStudy.edges.forEach(({ node }) => {
+    createPage({
+      path: node.slug,
+      component: path.resolve(`./src/templates/caseStudy.js`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        slug: node.slug,
+      },
+    })
   })
 }
+
+
+// exports.createPages = ({graphql, actions}) => {
+//   const {createPage} = actions
+//   return new Promise((resolve, reject) => {
+//     const caseStudyTemplate = path.resolve('src/templates/caseStudy.js')
+//     resolve(
+//       graphql(`
+//         {
+//   allContentfulCaseStudy {
+//     edges {
+//       node {
+//         description {
+//           description
+//         }
+//         slug
+//         title
+//         gallery {
+//           fluid {
+//             srcSetWebp
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+//       `).then((result) => {
+//         if (result.errors) {
+//           reject(result.errors)
+//         }
+//         result.data.allContentfulCaseStudy.edges.forEach((edge) => {
+//           createPage ({
+//             path: edge.node.title.toLowerCase(),
+//             component: caseStudyTemplate,
+//             context: {
+//               slug: edge.node.title
+//             }
+//           })
+//         })
+//         return
+//       })
+//     )
+//   })
+// }

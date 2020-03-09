@@ -27,7 +27,7 @@ const GalleryImageList = ({ classes }: Props) => {
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <div className={classes.animatedBackground}>
-            <Link to='./blog/'>
+            <Link to='./mendocino-spirits'>
               <video
                 width='100%'
                 loop
