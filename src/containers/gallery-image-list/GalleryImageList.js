@@ -85,7 +85,7 @@ const GalleryImageList = ({ classes }: Props) => {
         </Grid>
         <Grid item xs={12} md={6}>
           <div className={classes.animatedBackground}>
-            <Link to='./blog/'>
+            <Link to='./logos/'>
               <video
                 width='100%'
                 loop
