@@ -6,6 +6,7 @@ import Img from "gatsby-image";
 import { Container } from '@material-ui/core';
 import styles from './style';
 import StackGrid from "react-stack-grid"
+import sizeMe from 'react-sizeme'
 
 
 type Props = {
@@ -18,7 +19,7 @@ return (
     <Layout>
     <SEO title={page.title}/>
     <Container maxWidth='xl'>        
-            <StackGrid columnWidth={400} gutterWidth={20} gutterHeight={20} easing={'easeInOut'}>
+            <StackGrid columnWidth={width <= 768 ? '100%' : '33.33%'} gutterWidth={20} gutterHeight={20} easing={'easeInOut'}>
                 <div>
                     <h1>{page.title}</h1>
                     <h4>{page.description.description}</h4>

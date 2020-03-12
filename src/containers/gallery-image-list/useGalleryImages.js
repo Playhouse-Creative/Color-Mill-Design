@@ -5,7 +5,7 @@ const useGalleryImages = () => {
     const data = useStaticQuery(
         graphql`
         query {
-          allContentfulGalleryImage(filter: {contentful_id: {eq: "58X0DMtiWDfT1Icq7owo9w"}}) {
+          allContentfulGalleryImage(filter: {contentful_id: {eq: ""}}) {
             edges {
               node {
                 stillImage {
