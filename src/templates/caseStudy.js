@@ -22,7 +22,7 @@ return (
     <Layout>
     <SEO title={page.title}/>
     <Container maxWidth='xl'>        
-            <StackGrid columnWidth={isMobileView === true ? '100%' : '33.33%'} gutterWidth={20} gutterHeight={20} easing={'easeInOut'}>
+            <StackGrid columnWidth={300} gutterWidth={20} gutterHeight={20} easing={'easeInOut'}>
                 <div>
                     <h1>{page.title}</h1>
                     <h4>{page.description.description}</h4>
