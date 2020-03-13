@@ -21,7 +21,7 @@ const page = data.contentfulCaseStudy;
 return (
     <Layout>
     <SEO title={page.title}/>
-    <Container maxWidth='xl'>        
+    <Container maxWidth='lg'>        
             <StackGrid columnWidth={300} gutterWidth={20} gutterHeight={20} easing={'easeInOut'}>
                 <div>
                     <h1>{page.title}</h1>
