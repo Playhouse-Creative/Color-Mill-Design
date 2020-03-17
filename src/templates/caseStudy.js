@@ -6,7 +6,6 @@ import Img from "gatsby-image";
 import { Container } from '@material-ui/core';
 import styles from './style';
 import StackGrid from "react-stack-grid"
-import isMobileView from '../utils/isMobileView.js'
 
 
 
