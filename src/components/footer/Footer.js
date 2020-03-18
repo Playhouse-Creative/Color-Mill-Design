@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
 import { useForm, Controller} from "react-hook-form";
-import { Box, Input, Button, TextField } from '@material-ui/core'
+import { Input, Button, Grid, TextField } from '@material-ui/core'
 import * as yup from 'yup'
 import styles from './style';
 
@@ -23,27 +23,74 @@ function Footer({ classes }: Props) {
   const onSubmit = data => console.log(data);
   console.log(errors)
   return(
-  <div>
-  <footer className={classes.topContainer}>
+  <>
+  <Grid className={classes.topContainer}>
+  <Grid item xs={0} md={6} />
+  <Grid item xs={12} md={4}>
+  <h2 className={classes.formTitle}>Contact us</h2>
+  
   <form onSubmit={handleSubmit(onSubmit)}>
-    <Box>
-      <Controller as={TextField} className={classes.inputField} placeholder="First name" name="firstName" ref={register({required: true, maxLength: 80})} control={control} defaultValue=""/>
+      <Controller 
+        as={TextField} 
+        className={classes.inputField} 
+        disableUnderline= {true} 
+        type='text' variant="outlined" 
+        margin="dense" 
+        placeholder="First name" 
+        name="firstName" 
+        ref={register({required: true, maxLength: 80})} 
+        control={control} 
+        defaultValue=""/>
       {errors.firstName && 'First name is required'}
-      <Controller as={Input} className={classes.inputField} type ='text'placeholder="Last name" name="lastName" ref={register({required: true, maxLength: 100})} control={control} defaultValue=""/>
+      <Controller 
+        as={TextField} 
+        className={classes.inputField} 
+        disableUnderline= {true} 
+        type='text'
+        variant="outlined"
+        margin="dense"
+        placeholder="Last name" 
+        name="lastName" 
+        ref={register({required: true, maxLength: 100})} 
+        control={control} 
+        defaultValue=""/>
       {errors.lastName && 'Last name is required'}
-      <Controller as={Input} className={classes.inputField}  type='text' placeholder="Email" name="email" ref={register({required: true, pattern: /^\S+@\S+$/i})} control={control} defaultValue=""/>
+      <Controller 
+        as={TextField} 
+        className={classes.inputField}  
+        disableUnderline= {true} 
+        type='text' 
+        variant="outlined" 
+        margin="dense" 
+        placeholder="Email" 
+        name="email" 
+        ref={register({required: true, pattern: /^\S+@\S+$/i})} 
+        control={control} 
+        defaultValue=""/>
       {errors.email && 'Please submit a valid email address'}
-      <Controller as={Input} className={classes.inputField}  type="text" placeholder="Message" name="message" ref={register({required: true, maxLength: 2000})} control={control} defaultValue=""/>
-      </Box>
-      <Button type='submit'>Submit</Button>
+      <Controller 
+        as={TextField} 
+        className={classes.inputField}  
+        multiline= {true} 
+        rows={4} 
+        disableUnderline= {true} 
+        type="text" 
+        variant="outlined" 
+        margin="dense" 
+        placeholder="Message" 
+        name="message" 
+        ref={register({required: true, maxLength: 2000})} 
+        control={control} 
+        defaultValue=""/>
+      <Button className={classes.button} type='submit'>Submit</Button>
     </form>
-    </footer>
+    </Grid>
+    </Grid>
   <footer className={classes.bottomContainer}>
-    © {new Date().getFullYear()}, Built by Color Mill Design with
-    {' '}
-    <a href='https://www.gatsbyjs.org' className={classes.linkOut} >Gatsby</a>
+    © {new Date().getFullYear()}, Built by Color Mill Design with {' '}
+    <a href='https://www.gatsbyjs.org' className={classes.linkOut}>Gatsby</a>
   </footer>
-  </div>
+  </>
 );
 }
 

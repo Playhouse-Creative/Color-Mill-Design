@@ -10,7 +10,7 @@ const styles = ({ app, breakpoints, typography }) => ({
     minHeight: '100vh',
   },
   scrollFix: {
-    marginRight: '-17px !important',
+    marginRight: '-8px !important',
     marginBottom: '-17px !important',
   },
   pageContainer: {
@@ -25,8 +25,8 @@ const styles = ({ app, breakpoints, typography }) => ({
     background: '#E8E8E8',
   },
   content: {
-    margin: '5rem auto',
-    maxWidth: app.maxWidth,
+    margin: ' 3rem auto',
+    maxWidth: 'app.maxWidth',
     width: '90%',
   },
   background: {
