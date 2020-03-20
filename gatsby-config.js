@@ -12,6 +12,9 @@ module.exports = {
     `gatsby-plugin-flow`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
+    "options": {
+    "excerpt_separator": `<!-- endexcerpt -->`
+    },
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     {

@@ -24,7 +24,7 @@ return (
             <StackGrid columnWidth={300} gutterWidth={20} gutterHeight={20} easing={'easeInOut'}>
                 <div>
                     <h1>{page.title}</h1>
-                    <h4>{page.description.description}</h4>
+                    <p dangerouslySetInnerHTML={{ __html:page.description.childMarkdownRemark.html}}></p>
             </div>
                         {page.gallery.map(({ fluid }) => (
                             <div>
@@ -41,7 +41,9 @@ export const query = graphql`
         contentfulCaseStudy( slug: { eq: $slug } ) {
         title
         description{
-            description
+            childMarkdownRemark{
+                html
+            }
         }
         gallery {
             fluid(maxWidth: 900) {
