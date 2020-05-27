@@ -1,54 +1,11 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
 module.exports = {
   siteMetadata: {
     title: `Color Mill Design`,
-    description: `We are a design studio specializing in delightful branding and web experiences.`,
-    author: `The Color Mill Design`,
+    description: `A design Studio specializing in delightful branding and web experiences`,
+    author: `hello@mycolormill.com`,
   },
   plugins: [
-    `gatsby-plugin-flow`,
-    `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
-    "options": {
-    "excerpt_separator": `<!-- endexcerpt -->`
-    },
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-material-ui`,
-      options: {
-        stylesProvider: {
-          injectFirst: true,
-        },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-module-resolver',
-      options: {
-        root: './src',
-        aliases: {
-          'components': './components',
-          'containers': './containers',
-          'images': './images',
-          'state': './state',
-          'styles': './styles',
-          'utils': './utils',
-          static: {
-            root: './public',
-            alias: './static'
-          }
-        }
-      }
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -56,36 +13,40 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter`,
-        short_name: `Gatsby Starter`,
+        name: `Portfolio-Jeremy-Logan`,
+        short_name: `Portfolio`,
         start_url: `/`,
-        background_color: `black`,
-        theme_color: `black`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`,
+        icon: `src/images/portrait.png`, // This path is relative to the root of the site.
       },
     },
     {
-      resolve: `gatsby-plugin-react-redux`,
+      resolve: `gatsby-plugin-material-ui`,
+      // If you want to use styled components, in conjunction to Material-UI, you should:
+      // - Change the injection order
+      // - Add the plugin
       options: {
-        pathToCreateStoreModule: "./src/state/store",
-        serialize: {
-          space: 0,
-          isJSON: true,
-          unsafe: false,
+        stylesProvider: {
+          injectFirst: true,
         },
       },
+      //'gatsby-plugin-styled-components',
     },
     {
-      resolve: `gatsby-source-contentful`,
+      resolve: `gatsby-plugin-styled-components`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken:process.env.CONTENTFUL_ACCESS_TOKEN,
-        environment: process.env.CONTENTFUL_ENV,
-      }
+        // Add any options here
+      },
     },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    `gatsby-plugin-offline`,
   ],
 }
