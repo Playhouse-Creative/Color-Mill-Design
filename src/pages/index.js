@@ -54,15 +54,14 @@ const IndexPage = (props) => {
     <div style={{ padding: '0 2rem', backgroundColor: '#d0d2d3'}}>
     <Layout>
       <SEO title="Home" />
-      <div style={{ paddingTop: 100}}>
-      <div >
+      <div style={{ paddingTop: 200}}>
+      <h1>Color Mill Design</h1>
       <Grid container spacing={2} name='gallery' >
         <BourbonCard/>
         <NoyoCard/>
         <UMSPCard/>
         <LogosCard/>
       </Grid>
-    </div>
     </div>
     </Layout>
     </div>

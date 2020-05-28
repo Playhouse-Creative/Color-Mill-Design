@@ -23,6 +23,7 @@ import HomeIcon from '@material-ui/icons/Home'
 import ListIcon from '@material-ui/icons/ViewList'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import logo from '../images/Color-Mill-Animated-Logo-Loop01.gif'
 
 const drawerWidth = 240
 
@@ -35,7 +36,7 @@ const useStyles = makeStyles(theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    background: '#2E1140',
+    background: '#453153',
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -117,7 +118,13 @@ const Header = ({ siteTitle }) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" color="inherit">
+          <Link to='/.' >
+          <img src={logo}
+          style={{marginRight: '20px'}} >
+          </img>
+          </Link>
+          
+          <Typography variant="h4" color="inherit">
             {siteTitle}
           </Typography>
         </Toolbar>
