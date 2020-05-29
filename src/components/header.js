@@ -5,11 +5,13 @@ import { Link } from 'gatsby'
 
 import clsx from 'clsx'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
-import Drawer from '@material-ui/core/Drawer'
+import SwipeableDrawer from '@material-ui/core/Drawer'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
+import Grid from '@material-ui/core/Grid'
 import List from '@material-ui/core/List'
+import Hidden from '@material-ui/core/Hidden'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import IconButton from '@material-ui/core/IconButton'
@@ -29,7 +31,7 @@ const drawerWidth = 240
 
 const useStyles = makeStyles(theme => ({
   root: {
-    display: 'flex',
+    display: 'flex-box',
   },
   appBar: {
     transition: theme.transitions.create(['margin', 'width'], {
@@ -40,7 +42,7 @@ const useStyles = makeStyles(theme => ({
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
+    marginRight: drawerWidth,
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
@@ -48,6 +50,7 @@ const useStyles = makeStyles(theme => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    alignItems: 'right'
   },
   hide: {
     display: 'none',
@@ -73,7 +76,7 @@ const useStyles = makeStyles(theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    marginLeft: -drawerWidth,
+    marginRight: -drawerWidth,
   },
   contentShift: {
     transition: theme.transitions.create('margin', {
@@ -82,6 +85,14 @@ const useStyles = makeStyles(theme => ({
     }),
     marginLeft: 0,
   },
+  horizontalList: {
+    display: 'flex',
+    flexDirection: 'row',
+    padding: 0,
+    },
+  menuListItem: {
+    color: 'white'
+    }
 }))
 
 const Header = ({ siteTitle }) => {
@@ -99,8 +110,9 @@ const Header = ({ siteTitle }) => {
   }
 
   return (
-    <div className={classes.root}>
+    <div>
       <CssBaseline />
+      
       <AppBar
         position="fixed"
         elevation={0}
@@ -109,30 +121,56 @@ const Header = ({ siteTitle }) => {
         })}
       >
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="Open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            className={clsx(classes.menuButton, open && classes.hide)}
-          >
-            <MenuIcon />
-          </IconButton>
+        <Grid container direction="row" justify="space-between" alignItems="center">
+          <Grid item>
           <Link to='/.' >
           <img src={logo}
           style={{marginRight: '20px'}} >
           </img>
           </Link>
-          
-          <Typography variant="h4" color="inherit">
-            {siteTitle}
-          </Typography>
+          </Grid>
+          <Hidden smDown>
+          <Grid item >
+          <List className={classes.horizontalList}>
+          <Link to="/">
+            <ListItem button>
+              <ListItemText className={classes.menuListItem}>About</ListItemText>
+            </ListItem>
+          </Link>
+          <Link to="/">
+            <ListItem button>
+              <ListItemText className={classes.menuListItem}>Contact</ListItemText>
+            </ListItem>
+          </Link>
+          <Link to="/">
+            <ListItem button>
+              <ListItemText className={classes.menuListItem}>Blog</ListItemText>
+            </ListItem>
+          </Link>
+          </List>
+          </Grid>
+          </Hidden>
+          <Hidden mdUp>
+          <Grid item>
+          <IconButton
+            color="inherit"
+            aria-label="Open drawer"
+            onClick={handleDrawerOpen}
+            edge="end"
+            className={clsx(classes.menuButton, open && classes.hide)}
+          >
+            <MenuIcon />
+          </IconButton>
+          </Grid>
+          </Hidden>
+          </Grid>
         </Toolbar>
+        
       </AppBar>
-      <Drawer
+      
+      <SwipeableDrawer
         className={classes.drawer}
-        variant="persistent"
-        anchor="left"
+        anchor="right"
         open={open}
         classes={{
           paper: classes.drawerPaper,
@@ -174,7 +212,7 @@ const Header = ({ siteTitle }) => {
             </ListItem>
           </a>
         </List>
-      </Drawer>
+      </SwipeableDrawer>
     </div>
   )
 }
