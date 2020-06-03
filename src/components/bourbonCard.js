@@ -1,8 +1,8 @@
 import React from 'react'
 import { makeStyles, Grid, Modal, Backdrop, Fade, } from '@material-ui/core'
 import {useSpring, animated} from 'react-spring'
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"
+import { Carousel } from 'react-responsive-carousel'
 import BourbonStill from '../images/Animated-Whiskey-Poster.jpg'
 import BourbonVideo from '../images/Animated-Whiskey.mp4'
 import ArtImage from './hooks/artImage.js'
@@ -53,61 +53,60 @@ const BourbonCard = (props) => {
         setOpen(false);
     };
 
-return(
-<Grid item xs={12} md={6}>
-    <>
-        <button
-        onClick={handleOpen}
-        style={{ cursor: 'pointer', border:'none', padding: 0, maxHeight:1 }}
-        >
-        <video
-            width="100%"
-            loop
-            muted
-            poster={BourbonStill}
-            onMouseOver={e => e.target.play()}
-            onTouchMove={e => e.target.play()}
-            onFocus={e => e.target.play()}
-            onMouseOut={e => e.target.pause()}
-            //onTouchEnd={e => e.target.pause()}
-            onBlur={e => e.target.load()}
-        >
-            <source src={BourbonVideo} />
-        </video>
-        </button>
-        <Modal
-        aria-labelledby="transition-indexModal-title"
-        aria-describedby="transition-indexModal-description"
-        className={classes.indexModal}
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-            timeout: 500,
-        }}
-        >
-        <Fade in={open}>
-            <div className={classes.indexPaper}>
-            <Carousel showThumbs={false} infiniteLoop useKeyboardArrows autoPlay dynamicHeight>
-                <div>
-                    <ArtImage src="Animated-Whiskey-Poster.jpg"/>
-                    </div>
-                    <div>
-                    <ArtImage src="Bourbon-Label.jpg"/>
-                    </div>
-                    <div>
-                    <ArtImage src="Bourbon-Bottle.jpg"/>
-                    </div>
-            </Carousel>
-            </div>
-        </Fade>
-        </Modal>
-    </>
-    </Grid>
 
-)
-}
+return(
+    <Grid item xs={12} md={6}>
+        <>
+            <button
+            onClick={handleOpen}
+            style={{ cursor: 'pointer', border:'none', padding: 0, maxHeight:1 }}
+            >
+            <video
+                width="100%"
+                loop
+                muted
+                poster={BourbonStill}
+                onMouseOver={e => e.target.play()}
+                onTouchMove={e => e.target.play()}
+                onFocus={e => e.target.play()}
+                onMouseOut={e => e.target.pause()}
+                //onTouchEnd={e => e.target.pause()}
+                onBlur={e => e.target.load()}
+            >
+                <source src={BourbonVideo} />
+            </video>
+            </button>
+            <Modal
+            aria-labelledby="transition-indexModal-title"
+            aria-describedby="transition-indexModal-description"
+            className={classes.indexModal}
+            open={open}
+            onClose={handleClose}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+                timeout: 500,
+            }}
+            >
+            <Fade in={open}>
+                <div className={classes.indexPaper}>
+                <Carousel showThumbs={false} infiniteLoop useKeyboardArrows autoPlay dynamicHeight>
+                    <div>
+                        <ArtImage src="Animated-Whiskey-Poster.jpg"/>
+                        </div>
+                        <div>
+                        <ArtImage src="Bourbon-Label.jpg"/>
+                        </div>
+                        <div>
+                        <ArtImage src="Bourbon-Bottle.jpg"/>
+                        </div>
+                </Carousel>
+                </div>
+            </Fade>
+            </Modal>
+        </>
+    </Grid>
+)}
 
 export default BourbonCard
 

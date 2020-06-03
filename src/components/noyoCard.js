@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'gatsby'
 import { makeStyles, Grid, Modal, Backdrop, Fade, } from '@material-ui/core'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
@@ -51,6 +52,8 @@ const NoyoCard = (props) => {
     const handleClose = () => {
         setOpen(false);
     };
+
+    
 
 return(
 <Grid item xs={12} md={6}>
