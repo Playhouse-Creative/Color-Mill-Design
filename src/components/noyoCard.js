@@ -94,13 +94,13 @@ return(
             <div className={classes.indexPaper}>
             <Carousel showThumbs={false} infiniteLoop useKeyboardArrows autoPlay dynamicHeight>
                 <div>
-                    <ArtImage src="NoyoCollateral.jpg"/>
+                    <ArtImage src="NoyoCollateral.jpg" alt="Noyo Harbor Inn Collateral"/>
                     </div>
                     <div>
-                    <ArtImage src="NoyoAds.jpg"/>
+                    <ArtImage src="NoyoAds.jpg" alt="Noyo Harbor Inn Ads"/>
                     </div>
                     <div>
-                    <ArtImage src="NoyoMenus.jpg"/>
+                    <ArtImage src="NoyoMenus.jpg" alt="Noyo Harbor Inn Menus"/>
                     </div>
             </Carousel>
             </div>

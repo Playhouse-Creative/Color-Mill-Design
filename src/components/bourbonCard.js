@@ -92,13 +92,13 @@ return(
                 <div className={classes.indexPaper}>
                 <Carousel showThumbs={false} infiniteLoop useKeyboardArrows autoPlay dynamicHeight>
                     <div>
-                        <ArtImage src="Animated-Whiskey-Poster.jpg"/>
+                        <ArtImage src="Animated-Whiskey-Poster.jpg" alt="Mendocino Spirits Bourbon"/>
                         </div>
                         <div>
-                        <ArtImage src="Bourbon-Label.jpg"/>
+                        <ArtImage src="Bourbon-Label.jpg" alt="Mendocino Spirits Bourbon Label"/>
                         </div>
                         <div>
-                        <ArtImage src="Bourbon-Bottle.jpg"/>
+                        <ArtImage src="Bourbon-Bottle.jpg" alt="Mendocino Spirits Bourbon Bottle"/>
                         </div>
                 </Carousel>
                 </div>

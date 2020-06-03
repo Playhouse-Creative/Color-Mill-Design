@@ -90,55 +90,55 @@ return(
             <div className={classes.indexPaper}>
             <Carousel showThumbs={false} infiniteLoop useKeyboardArrows autoPlay dynamicHeight>
                 <div>
-                    <ArtImage src="Mendo-High-Logo.jpg"/>
+                    <ArtImage src="Mendo-High-Logo.jpg" alt="Mendocino High Logo"/>
                     </div>
                     <div>
-                    <ArtImage src="InnAtNewportRanch-Logo-031416.jpg"/>
+                    <ArtImage src="InnAtNewportRanch-Logo-031416.jpg" alt="Inn At Newport Ranch Logo"/>
                     </div>
                     <div>
-                    <ArtImage src="ScullysLogoFinal.jpg"/>
+                    <ArtImage src="ScullysLogoFinal.jpg" alt="Scully's Logo"/>
                     </div>
                     <div>
-                    <ArtImage src="RoseBudsBasicLogo.jpg"/>
+                    <ArtImage src="RoseBudsBasicLogo.jpg" alt="Rose Buds Logo"/>
                     </div>
                     <div>
-                    <ArtImage src="Noyo-logo-Vector-Blue-vertical.jpg"/>
+                    <ArtImage src="Noyo-logo-Vector-Blue-vertical.jpg" alt="Noyo Harbor Inn Logo"/>
                     </div>
                     <div>
-                    <ArtImage src="TregoningLogoCleanFINAL_INC.jpg"/>
+                    <ArtImage src="TregoningLogoCleanFINAL_INC.jpg" alt="Tregoning Construction Logo"/>
                     </div>
                     <div>
-                    <ArtImage src="UMSP_Logo_Coloro.jpg"/>
+                    <ArtImage src="UMSP_Logo_Coloro.jpg" alt="Ukiah Main Street Project Logo"/>
                     </div>
                     <div>
-                    <ArtImage src="Barrera-Logo.jpg"/>
+                    <ArtImage src="Barrera-Logo.jpg" alt="Barrera Logo"/>
                     </div>
                     <div>
-                    <ArtImage src="Beckman-Logo.jpg"/>
+                    <ArtImage src="Beckman-Logo.jpg" alt="Beckman Printing Logo"/>
                     </div>
                     <div>
-                    <ArtImage src="Coast_Accupuncture_logo.jpg"/>
+                    <ArtImage src="Coast_Accupuncture_logo.jpg" alt="Coast Accupuncture Logo"/>
                     </div>
                     <div>
-                    <ArtImage src="DjangosLogob&wforPrint.jpg"/>
+                    <ArtImage src="DjangosLogob&wforPrint.jpg" alt="Django's Logo"/>
                     </div>
                     <div>
-                    <ArtImage src="Ebb-FlowRowing.jpg"/>
+                    <ArtImage src="Ebb-FlowRowing.jpg" alt="Ebb & Flow Logo"/>
                     </div>
                     <div>
-                    <ArtImage src="Good-Things-Farm.jpg"/>
+                    <ArtImage src="Good-Things-Farm.jpg" alt="Good Things Farm Logo"/>
                     </div>
                     <div>
-                    <ArtImage src="CY-Painting.jpg"/>
+                    <ArtImage src="CY-Painting.jpg" alt="CY Painting Logo"/>
                     </div>
                     <div>
-                    <ArtImage src="Montessori-Del-Mar-Logo.jpg"/>
+                    <ArtImage src="Montessori-Del-Mar-Logo.jpg" alt="Montessori Del Mar Logo"/>
                     </div>
                     <div>
-                    <ArtImage src="NCSegway_Logo_Final.jpg"/>
+                    <ArtImage src="NCSegway_Logo_Final.jpg" alt="North Coast Segway Logo"/>
                     </div>
                     <div>
-                    <ArtImage src="Noyo_HR_Logo-091317.jpg"/>
+                    <ArtImage src="Noyo_HR_Logo-091317.jpg" alt="Noyo Headlands Race Logo"/>
                     </div>
             </Carousel>
             </div>
