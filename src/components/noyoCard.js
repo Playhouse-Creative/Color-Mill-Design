@@ -58,7 +58,6 @@ return(
         <button
         type="button"
         onClick={handleOpen}
-        react-transition-group
         style={{ cursor: 'pointer', border:'none', padding: 0, maxHeight:1 }}
         >
         <video

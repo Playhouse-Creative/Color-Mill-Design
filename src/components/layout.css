@@ -36,6 +36,35 @@ canvas,
 progress,
 video {
   display: inline-block;
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+@keyframes fadeIn {
+from {opacity:0; transform: translateY(200px)}
+to {opacity:1; transform: translateY(0px)} 
+}
+
+@-moz-keyframes fadeIn {
+0% {opacity:0; transform: translateY(200px)}
+100% {opacity:1; transform: translateY(0px)}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0; transform: translateY(200px)}
+100% {opacity:1; transform: translateY(0px)}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0; transform: translateY(200px)}
+100% {opacity:1; transform: translateY(0px)}
+}
+
+@-ms-keyframes fadeIn {
+0% {opacity:0; transform: translateY(200px)}
+100% {opacity:1; transform: translateY(0px)}
 }
 audio:not([controls]) {
   display: none;
@@ -243,7 +272,7 @@ h1 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: 3rem;
   line-height: 1.1;
 }
 h2 {
@@ -260,7 +289,7 @@ h2 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  font-size: 2rem;
   line-height: 1.1;
 }
 h3 {

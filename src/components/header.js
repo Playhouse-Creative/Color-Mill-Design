@@ -49,8 +49,8 @@ const useStyles = makeStyles(theme => ({
     }),
   },
   menuButton: {
-    marginRight: theme.spacing(2),
-    alignItems: 'right'
+    marginRight: theme.spacing(3),
+    alignItems: 'right',
   },
   hide: {
     display: 'none',
@@ -121,18 +121,17 @@ const Header = ({ siteTitle }) => {
         })}
       >
         <Toolbar>
-        <Grid container direction="row" justify="space-between" alignItems="center">
+        <Grid container direction="row" justify="space-between" alignItems="center" style={{margin: '0 6% 0 8%'}}>
           <Grid item>
           <Link to='/.' >
-          <img src={logo}
-          style={{marginRight: '20px'}} >
+          <img src={logo}>
           </img>
           </Link>
           </Grid>
           <Hidden smDown>
-          <Grid item >
+          <Grid item style={{marginRight: '2rem'}}>
           <List className={classes.horizontalList}>
-          <Link to="/">
+          <Link to="/about">
             <ListItem button>
               <ListItemText className={classes.menuListItem}>About</ListItemText>
             </ListItem>
@@ -151,7 +150,7 @@ const Header = ({ siteTitle }) => {
           </Grid>
           </Hidden>
           <Hidden mdUp>
-          <Grid item>
+          <Grid item >
           <IconButton
             color="inherit"
             aria-label="Open drawer"

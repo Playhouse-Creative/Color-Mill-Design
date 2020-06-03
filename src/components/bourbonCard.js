@@ -1,5 +1,6 @@
 import React from 'react'
 import { makeStyles, Grid, Modal, Backdrop, Fade, } from '@material-ui/core'
+import {useSpring, animated} from 'react-spring'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import BourbonStill from '../images/Animated-Whiskey-Poster.jpg'
@@ -57,7 +58,6 @@ return(
     <>
         <button
         onClick={handleOpen}
-        react-transition-group
         style={{ cursor: 'pointer', border:'none', padding: 0, maxHeight:1 }}
         >
         <video

@@ -1,10 +1,10 @@
 import React from 'react'
-import { makeStyles, Grid, } from '@material-ui/core'
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import { Carousel } from 'react-responsive-carousel';
+import { makeStyles, Grid, Modal, Backdrop, Fade } from '@material-ui/core'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 import LogosStill from '../images/Animated-Logos-Poster.jpg'
 import LogosVideo from '../images/Animated-Logos.mp4'
-// import ArtImage from './hooks/artImage.js'
+import ArtImage from './hooks/artImage.js'
 
 const useStyles = makeStyles(theme => ({
     indexRoot: {
@@ -57,7 +57,7 @@ return(
         <button
         onClick={handleOpen}
         react-transition-group
-        style={{ cursor: 'auto', border:'none', background:'white', padding: 0 }}
+        style={{ cursor: 'pointer', border:'none', background:'white', padding: 0 }}
         >
         <video
             width="100%"
@@ -74,7 +74,76 @@ return(
             <source src={LogosVideo} />
         </video>
         </button>
-        
+        <Modal
+        aria-labelledby="transition-indexModal-title"
+        aria-describedby="transition-indexModal-description"
+        className={classes.indexModal}
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+            timeout: 500,
+        }}
+        >
+        <Fade in={open}>
+            <div className={classes.indexPaper}>
+            <Carousel showThumbs={false} infiniteLoop useKeyboardArrows autoPlay dynamicHeight>
+                <div>
+                    <ArtImage src="Mendo-High-Logo.jpg"/>
+                    </div>
+                    <div>
+                    <ArtImage src="InnAtNewportRanch-Logo-031416.jpg"/>
+                    </div>
+                    <div>
+                    <ArtImage src="ScullysLogoFinal.jpg"/>
+                    </div>
+                    <div>
+                    <ArtImage src="RoseBudsBasicLogo.jpg"/>
+                    </div>
+                    <div>
+                    <ArtImage src="Noyo-logo-Vector-Blue-vertical.jpg"/>
+                    </div>
+                    <div>
+                    <ArtImage src="TregoningLogoCleanFINAL_INC.jpg"/>
+                    </div>
+                    <div>
+                    <ArtImage src="UMSP_Logo_Coloro.jpg"/>
+                    </div>
+                    <div>
+                    <ArtImage src="Barrera-Logo.jpg"/>
+                    </div>
+                    <div>
+                    <ArtImage src="Beckman-Logo.jpg"/>
+                    </div>
+                    <div>
+                    <ArtImage src="Coast_Accupuncture_logo.jpg"/>
+                    </div>
+                    <div>
+                    <ArtImage src="DjangosLogob&wforPrint.jpg"/>
+                    </div>
+                    <div>
+                    <ArtImage src="Ebb-FlowRowing.jpg"/>
+                    </div>
+                    <div>
+                    <ArtImage src="Good-Things-Farm.jpg"/>
+                    </div>
+                    <div>
+                    <ArtImage src="CY-Painting.jpg"/>
+                    </div>
+                    <div>
+                    <ArtImage src="Montessori-Del-Mar-Logo.jpg"/>
+                    </div>
+                    <div>
+                    <ArtImage src="NCSegway_Logo_Final.jpg"/>
+                    </div>
+                    <div>
+                    <ArtImage src="Noyo_HR_Logo-091317.jpg"/>
+                    </div>
+            </Carousel>
+            </div>
+        </Fade>
+        </Modal>
     </>
     </Grid>
 
