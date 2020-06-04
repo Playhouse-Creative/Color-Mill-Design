@@ -74,7 +74,6 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
-    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Bangers&family=Carter+One&display=swap" rel="stylesheet"/>
     </Helmet>
     </>
   )

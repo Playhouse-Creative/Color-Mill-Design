@@ -53,7 +53,7 @@ const IndexPage = (props) => {
   return(
 
     <Layout>
-        <div style={{ padding: '0 10%', backgroundColor: '#E9F1F7'}}>
+        <div style={{ padding: '0 10%', backgroundColor: '#E9F1F7', minHeight:'1000'}}>
         <SEO title="Home" />
         <div style={{ paddingTop: 180}}>
         <Grid container spacing={0} justify='space-between' >

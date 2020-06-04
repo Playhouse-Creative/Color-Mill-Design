@@ -91,7 +91,7 @@ const useStyles = makeStyles(theme => ({
     padding: 0,
     },
   menuListItem: {
-    color: 'white'
+    color: 'white',
     }
 }))
 
@@ -122,7 +122,7 @@ const Header = ({ siteTitle }) => {
       >
         <Toolbar>
         <Grid container direction="row" justify="space-between" alignItems="center" style={{margin: '0 6% 0 8%'}}>
-          <Grid item>
+          <Grid item >
           <Link to='/.' >
           <img src={logo}>
           </img>
@@ -131,18 +131,18 @@ const Header = ({ siteTitle }) => {
           <Hidden smDown>
           <Grid item style={{marginRight: '2rem'}}>
           <List className={classes.horizontalList}>
-          <Link to="/about">
-            <ListItem button>
-              <ListItemText className={classes.menuListItem}>About</ListItemText>
+          <Link to="/about" >
+            <ListItem>
+              <ListItemText  className={classes.menuListItem}>About</ListItemText>
             </ListItem>
           </Link>
           <Link to="/">
-            <ListItem button>
+            <ListItem>
               <ListItemText className={classes.menuListItem}>Contact</ListItemText>
             </ListItem>
           </Link>
           <Link to="/">
-            <ListItem button>
+            <ListItem>
               <ListItemText className={classes.menuListItem}>Blog</ListItemText>
             </ListItem>
           </Link>
