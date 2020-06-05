@@ -57,7 +57,7 @@ return(
         <button
         onClick={handleOpen}
         react-transition-group
-        style={{ cursor: 'auto', border:'none', background:'white', padding: 0 }}
+        style={{ cursor: 'auto', border:'none', background:'white', padding: 0, maxHeight: 1, outline: 0 }}
         >
         <video
             width="100%"

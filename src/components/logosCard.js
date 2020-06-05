@@ -61,6 +61,8 @@ const useStyles = makeStyles(theme => ({
                 border: 'none',
                 background: 'white',
                 padding: 0,
+                maxHeight: 1,
+                outline: 0
             }}
             >
             <video
@@ -77,6 +79,7 @@ const useStyles = makeStyles(theme => ({
             >
                 <source src={LogosVideo} />
             </video>
+            </button>
             <Modal
             aria-labelledby="transition-indexModal-title"
             aria-describedby="transition-indexModal-description"
@@ -189,7 +192,6 @@ const useStyles = makeStyles(theme => ({
                 </div>
             </Fade>
             </Modal>
-        </button>
     </Grid>
     </>
     )

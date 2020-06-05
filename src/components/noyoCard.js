@@ -63,6 +63,7 @@ const useStyles = makeStyles(theme => ({
                 border: 'none',
                 padding: 0,
                 maxHeight: 1,
+                outline: 0
             }}
             >
             <video
