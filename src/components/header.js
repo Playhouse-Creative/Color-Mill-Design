@@ -143,7 +143,7 @@ const Header = ({ siteTitle }) => {
                       </ListItemText>
                     </ListItem>
                   </Link>
-                  <Link to="/">
+                  <Link to="/contact">
                     <ListItem>
                       <ListItemText className={classes.menuListItem}>
                         Contact

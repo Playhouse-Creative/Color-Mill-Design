@@ -5,7 +5,7 @@ const useStyles = makeStyles(theme => ({
     paper: {
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[5],
-    margin: '1rem 1rem 3rem',
+    margin: '0',
     padding: '1rem',
     outline: 0,
     borderRadius: '5px',
@@ -31,10 +31,10 @@ const ContactForm = (props) => {
     const classes = useStyles()
 
     return(
-    <Grid container justify='center' spacing={2}>
-    <Grid item xs={10} sm={6}>
+    <Grid container justify='center' spacing={0}>
+    <Grid item xs={12} sm={6}>
     <Grid item className={classes.title}>
-    <h3>Get in touch with us</h3>
+    <h2>Get in touch with us</h2>
     </Grid>
     <Grid item className={classes.paper}>
     <form name="Design Contact Form" method="POST" data-netlify="true" > 

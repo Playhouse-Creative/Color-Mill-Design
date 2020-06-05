@@ -48,30 +48,13 @@ const ContactPage = (props) => {
   const isSmall = useMediaQuery(theme.breakpoints.down('sm'))
 
   return(
-    <div style={{ minHeight: '100vh', backgroundColor: '#5BD9D9' }}>
+    <>
   <Layout>
-  <div style={{paddingTop: 100}}>
+  <div style={{paddingTop: 150}}>
     <SEO title="Contact" />
-    <h1 style={{color: 'white', padding: '0 2rem 0 '}}>Contact</h1>
-    <div style={isSmall ? { padding: '0.5rem 0 2rem 3rem' } : { padding: '2rem ' }}>
-    <Box display='flex'>
-      <Grid container spacing={7} justify="center" alignItems="flex-start">
-      <Grid item xs={7} sm={4} md={6}>
-      <Img fluid={sources} maxHeight= '400px' imgStyle={{objectFit:'contain', maxHeight: '400px'}}/>
-      </Grid>
-        <Grid className={classes.contactRoot} item xs={11} md={6} style={isSmall ? { } : {marginTop: '13rem' }}>
-        <div style={{margin: '0 1rem -1rem'}}>
-        <h2 style={{ textAlign: 'center', fontFamily: 'Carter One'}}> Drop me a line</h2>
-          <h3 style={{ textAlign: 'center', fontFamily: 'Carter One'}}>Let’s create something together!</h3>
-        </div>
-        </Grid>    
-      </Grid>
-        </Box>
-      </div>
-    <ContactForm/>
     </div>
   </Layout>
-  </div>
+  </>
 )}
 
 export default ContactPage
