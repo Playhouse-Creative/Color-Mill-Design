@@ -89,10 +89,10 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'row',
     padding: 0,
-    },
+  },
   menuListItem: {
     color: 'white',
-    }
+  },
 }))
 
 const Header = ({ siteTitle }) => {
@@ -112,7 +112,7 @@ const Header = ({ siteTitle }) => {
   return (
     <div>
       <CssBaseline />
-      
+
       <AppBar
         position="fixed"
         elevation={0}
@@ -121,52 +121,62 @@ const Header = ({ siteTitle }) => {
         })}
       >
         <Toolbar>
-        <Grid container direction="row" justify="space-between" alignItems="center" style={{margin: '0 6% 0 8%'}}>
-          <Grid item >
-          <Link to='/.' >
-          <img src={logo}>
-          </img>
-          </Link>
-          </Grid>
-          <Hidden smDown>
-          <Grid item style={{marginRight: '2rem'}}>
-          <List className={classes.horizontalList}>
-          <Link to="/about" >
-            <ListItem>
-              <ListItemText  className={classes.menuListItem}>About</ListItemText>
-            </ListItem>
-          </Link>
-          <Link to="/">
-            <ListItem>
-              <ListItemText className={classes.menuListItem}>Contact</ListItemText>
-            </ListItem>
-          </Link>
-          <Link to="/">
-            <ListItem>
-              <ListItemText className={classes.menuListItem}>Blog</ListItemText>
-            </ListItem>
-          </Link>
-          </List>
-          </Grid>
-          </Hidden>
-          <Hidden mdUp>
-          <Grid item >
-          <IconButton
-            color="inherit"
-            aria-label="Open drawer"
-            onClick={handleDrawerOpen}
-            edge="end"
-            className={clsx(classes.menuButton, open && classes.hide)}
+          <Grid
+            container
+            direction="row"
+            justify="space-between"
+            alignItems="center"
+            style={{ margin: '0 6% 0 8%' }}
           >
-            <MenuIcon />
-          </IconButton>
-          </Grid>
-          </Hidden>
+            <Grid item>
+              <Link to="/.">
+                <img src={logo}></img>
+              </Link>
+            </Grid>
+            <Hidden smDown>
+              <Grid item style={{ marginRight: '2rem' }}>
+                <List className={classes.horizontalList}>
+                  <Link to="/about">
+                    <ListItem>
+                      <ListItemText className={classes.menuListItem}>
+                        About
+                      </ListItemText>
+                    </ListItem>
+                  </Link>
+                  <Link to="/">
+                    <ListItem>
+                      <ListItemText className={classes.menuListItem}>
+                        Contact
+                      </ListItemText>
+                    </ListItem>
+                  </Link>
+                  <Link to="/">
+                    <ListItem>
+                      <ListItemText className={classes.menuListItem}>
+                        Blog
+                      </ListItemText>
+                    </ListItem>
+                  </Link>
+                </List>
+              </Grid>
+            </Hidden>
+            <Hidden mdUp>
+              <Grid item>
+                <IconButton
+                  color="inherit"
+                  aria-label="Open drawer"
+                  onClick={handleDrawerOpen}
+                  edge="end"
+                  className={clsx(classes.menuButton, open && classes.hide)}
+                >
+                  <MenuIcon />
+                </IconButton>
+              </Grid>
+            </Hidden>
           </Grid>
         </Toolbar>
-        
       </AppBar>
-      
+
       <SwipeableDrawer
         className={classes.drawer}
         anchor="right"
@@ -205,7 +215,7 @@ const Header = ({ siteTitle }) => {
           <a href="https://www.instagram.com/the_colormill" target="_blank">
             <ListItem>
               <ListItemIcon>
-                <InstagramIcon/>
+                <InstagramIcon />
               </ListItemIcon>
               <ListItemText>Instagram</ListItemText>
             </ListItem>

@@ -9,7 +9,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Carter One';
+  font-family: 'nunito-sans';
 }
 
 a {
@@ -36,11 +36,11 @@ canvas,
 progress,
 video {
   display: inline-block;
-  animation: fadeIn ease 1s;
-  -webkit-animation: fadeIn ease 1s;
-  -moz-animation: fadeIn ease 1s;
-  -o-animation: fadeIn ease 1s;
-  -ms-animation: fadeIn ease 1s;
+  animation: fadeIn ease .3s;
+  -webkit-animation: fadeIn ease .3s;
+  -moz-animation: fadeIn ease .3s;
+  -o-animation: fadeIn ease .3s;
+  -ms-animation: fadeIn ease .3s;
 }
 @keyframes fadeIn {
 from {opacity:0; transform: translateY(200px)}
@@ -423,6 +423,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  font-size: 1rem;
 }
 figure {
   margin-left: 0;

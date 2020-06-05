@@ -1,7 +1,7 @@
 import React from 'react'
-import { makeStyles, Grid, Modal, Backdrop, Fade, } from '@material-ui/core'
-import {useSpring, animated} from 'react-spring'
-import "react-responsive-carousel/lib/styles/carousel.min.css"
+import { makeStyles, Grid, Modal, Backdrop, Fade } from '@material-ui/core'
+import { useSpring, animated } from 'react-spring'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 import BourbonStill from '../images/Animated-Whiskey-Poster.jpg'
 import BourbonVideo from '../images/Animated-Whiskey.mp4'
@@ -13,53 +13,56 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.background.paper,
         borderRadius: 60,
         margin: '-1rem 0 0 -1rem ',
-    nested: {
+        nested: {
         paddingLeft: theme.spacing(4),
-    },
+        },
     },
     indexCaption: {
         width: '100%',
         maxHeight: '1000px',
         backgroundColor: theme.palette.background.paper,
         borderRadius: '0% 0% 60px 60px',
-        margin: 0 ,
+        margin: 0,
     },
     indexModal: {
         width: '100%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        outline: 0
+        outline: 0,
     },
     indexPaper: {
         backgroundColor: theme.palette.background.paper,
         boxShadow: theme.shadows[5],
         width: '800px',
-        outline: 0
+        outline: 0,
     },
     }))
 
-const BourbonCard = (props) => {
-
+    const BourbonCard = props => {
     const classes = useStyles()
 
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(false)
 
     const handleOpen = () => {
-        setOpen(true);
-    };
+        setOpen(true)
+    }
 
     const handleClose = () => {
-        setOpen(false);
-    };
+        setOpen(false)
+    }
 
-
-return(
-    <Grid item xs={12} md={6}>
+    return (
+        <Grid item xs={12} md={6}>
         <>
             <button
             onClick={handleOpen}
-            style={{ cursor: 'pointer', border:'none', padding: 0, maxHeight:1 }}
+            style={{
+                cursor: 'pointer',
+                border: 'none',
+                padding: 0,
+                maxHeight: 1,
+            }}
             >
             <video
                 width="100%"
@@ -90,23 +93,38 @@ return(
             >
             <Fade in={open}>
                 <div className={classes.indexPaper}>
-                <Carousel showThumbs={false} infiniteLoop useKeyboardArrows autoPlay dynamicHeight>
+                <Carousel
+                    showThumbs={false}
+                    infiniteLoop
+                    useKeyboardArrows
+                    autoPlay
+                    dynamicHeight
+                >
                     <div>
-                        <ArtImage src="Animated-Whiskey-Poster.jpg" alt="Mendocino Spirits Bourbon"/>
-                        </div>
-                        <div>
-                        <ArtImage src="Bourbon-Label.jpg" alt="Mendocino Spirits Bourbon Label"/>
-                        </div>
-                        <div>
-                        <ArtImage src="Bourbon-Bottle.jpg" alt="Mendocino Spirits Bourbon Bottle"/>
-                        </div>
+                    <ArtImage
+                        src="Animated-Whiskey-Poster.jpg"
+                        alt="Mendocino Spirits Bourbon"
+                    />
+                    </div>
+                    <div>
+                    <ArtImage
+                        src="Bourbon-Label.jpg"
+                        alt="Mendocino Spirits Bourbon Label"
+                    />
+                    </div>
+                    <div>
+                    <ArtImage
+                        src="Bourbon-Bottle.jpg"
+                        alt="Mendocino Spirits Bourbon Bottle"
+                    />
+                    </div>
                 </Carousel>
                 </div>
             </Fade>
             </Modal>
         </>
-    </Grid>
-)}
+        </Grid>
+    )
+}
 
 export default BourbonCard
-
