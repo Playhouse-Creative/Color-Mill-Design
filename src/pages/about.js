@@ -56,7 +56,7 @@ const useStyles = makeStyles(theme => ({
             minHeight: '1000',
             }}
         >
-            <SEO title="Home" />
+            <SEO title="About" />
             <div style={{ paddingTop: 180 }}>
             <Grid container spacing={6} justify="center">
                 <Grid item xs={12}>
@@ -77,7 +77,7 @@ const useStyles = makeStyles(theme => ({
                 </Grid>
                 <Grid
                 item
-                xs={12}
+                xs={10}
                 sm={8}
                 md={4}
                 lg={3}
@@ -97,7 +97,7 @@ const useStyles = makeStyles(theme => ({
                 </Grid>
                 <Grid
                 item
-                xs={12}
+                xs={10}
                 sm={8}
                 md={4}
                 lg={3}

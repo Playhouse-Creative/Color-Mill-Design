@@ -150,13 +150,6 @@ const Header = ({ siteTitle }) => {
                       </ListItemText>
                     </ListItem>
                   </Link>
-                  <Link to="/">
-                    <ListItem>
-                      <ListItemText className={classes.menuListItem}>
-                        Blog
-                      </ListItemText>
-                    </ListItem>
-                  </Link>
                 </List>
               </Grid>
             </Hidden>
@@ -196,12 +189,12 @@ const Header = ({ siteTitle }) => {
         </div>
         <Divider />
         <List>
-          <Link to="/">
+          <Link to="/about">
             <ListItem button>
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
-              <ListItemText>Home</ListItemText>
+              <ListItemText>About</ListItemText>
             </ListItem>
           </Link>
           <Link to="/contact">

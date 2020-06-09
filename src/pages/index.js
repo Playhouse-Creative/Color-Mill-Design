@@ -61,7 +61,7 @@ const IndexPage = props => {
             <Grid item xs={12} md={2} alignItems="center">
               <h1 style={{ width: 200 }}>Color Mill Design</h1>
             </Grid>
-            <Grid item xs={12} md={4} justify="right">
+            <Grid item xs={12} md={4} justify="right" alignItems='right'>
               <h2>
                 We are a design studio specializing in delightful branding and
                 web experiences
@@ -88,7 +88,7 @@ const IndexPage = props => {
         </Grid>
         <Grid
           item
-          xs={12}
+          xs={6}
           sm={5}
           style={{ color: '#E9F1F7', paddingRight: '1rem' }}
         >
@@ -99,7 +99,7 @@ const IndexPage = props => {
           <h3>Illustration</h3>
           <h3>Identity Collateral</h3>
         </Grid>
-        <Grid item xs={12} sm={5} style={{ color: '#E9F1F7' }}>
+        <Grid item xs={6} sm={5} style={{ color: '#E9F1F7' }}>
           <h3>Web Design</h3>
           <h3>Web Development</h3>
           <h3>Signage</h3>

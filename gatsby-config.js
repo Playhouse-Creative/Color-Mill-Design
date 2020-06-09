@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Color Mill Design`,
+    title: `Graphic and Web Design created at Color Mill Design`,
     description: `A design Studio specializing in delightful branding and web experiences`,
     author: `hello@mycolormill.com`,
   },
@@ -19,7 +19,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Color-Mill-Design`,
-        short_name: `Design`,
+        short_name: `Color Mill Design`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

@@ -36,6 +36,9 @@ const ContactForm = (props) => {
     <Grid item className={classes.title}>
     <h2>Get in touch with us</h2>
     </Grid>
+    <Grid className={classes.textField}>
+    <h4>We'd love to chat about how the Color Mill can help you with your design needs.</h4>
+    </Grid>
     <Grid item className={classes.paper}>
     <form name="Design Contact Form" method="POST" data-netlify="true" > 
         <input type="hidden" name="contactForm" value="Design Contact Form" />
