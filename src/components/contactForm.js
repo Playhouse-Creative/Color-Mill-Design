@@ -40,9 +40,13 @@ const ContactForm = (props) => {
     <h4>We'd love to chat about how the Color Mill can help you with your design needs.</h4>
     </Grid>
     <Grid item className={classes.paper}>
-    <form name="Design Contact Form" method="POST" data-netlify="true" > 
+    <form name="Design Contact Form" method="POST" data-netlify="true" netlify-honeypot="bot-field" > 
         <input type="hidden" name="contactForm" value="Design Contact Form" />
         <Grid item className={classes.textField}>
+            <TextField
+            type='hidden'
+            name="bot-field"
+            />
             <TextField 
             required
             fullWidth
