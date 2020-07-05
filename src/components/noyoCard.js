@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme => ({
             <button
             type="button"
             onClick={handleOpen}
-            ariaLabel={'Noyo Harbor Inn'}
+            aria-label={'Noyo Harbor Inn'}
             style={{
                 cursor: 'pointer',
                 border: 'none',
