@@ -81,7 +81,7 @@ const IndexPage = props => {
           </Grid>
         </div>
       </div>
-      <Grid container style={{ padding: '8% 10%', backgroundColor: '#49BEAA' }}>
+      {/* <Grid container style={{ padding: '8% 10%', backgroundColor: '#49BEAA' }}>
         <Grid item xs={12} style={{ color: '#E9F1F7', paddingBottom: '2rem' }}>
           <h2>Our Capabilities</h2>
           <h4>Our approach to design is(write something good here)...</h4>
@@ -111,7 +111,7 @@ const IndexPage = props => {
       <Grid
         container
         style={{ height: 500, backgroundColor: '#E9F1F7' }}
-      ></Grid>
+      ></Grid> */}
     </Layout>
   )
 }
