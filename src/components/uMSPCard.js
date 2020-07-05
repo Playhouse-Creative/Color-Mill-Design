@@ -57,6 +57,7 @@ return(
         <button
         onClick={handleOpen}
         react-transition-group
+        ariaLabel={'Ukiah Main Street Program'}
         style={{ cursor: 'auto', border:'none', background:'white', padding: 0, maxHeight: 1, outline: 0 }}
         >
         <video

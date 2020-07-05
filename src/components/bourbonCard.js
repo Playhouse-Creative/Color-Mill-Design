@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme => ({
             <button
             onClick={handleOpen}
             react-transition-group
-            aria-label={'Mendocino Spirits Bourbon'}
+            ariaLabel={'Mendocino Spirits Bourbon'}
             style={{
                 cursor: 'pointer',
                 border: 'none',

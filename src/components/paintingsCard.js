@@ -58,6 +58,7 @@ return(
         type="button"
         onClick={handleOpen}
         react-transition-group
+        ariaLabel={'Paintings'}
         style={{ cursor: 'pointer', border:'none', background:'white', padding: 0 }}
         >
         <video

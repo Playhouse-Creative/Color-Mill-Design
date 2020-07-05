@@ -130,7 +130,7 @@ const Header = ({ siteTitle }) => {
           >
             <Grid item>
               <Link to="/.">
-                <img src={logo}></img>
+                <img src={logo} alt={'Color Mill Design'}></img>
               </Link>
             </Grid>
             <Hidden smDown>

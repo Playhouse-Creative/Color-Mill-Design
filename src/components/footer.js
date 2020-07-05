@@ -26,7 +26,7 @@ const Footer = () => {
             Gatsby
             </a>
         </div>
-        <img src={Deth} type="image/svg+xml" width="128" height="144" />
+        <img src={Deth} alt={'Made in Fort Bragg California'} type="image/svg+xml" width="128" height="144" />
         </div>
         </>
     )
