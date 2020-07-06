@@ -1,6 +1,5 @@
 import React from 'react'
 import { makeStyles, Grid, Modal, Backdrop, Fade } from '@material-ui/core'
-import { useSpring, animated } from 'react-spring'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 import BourbonStill from '../images/Animated-Whiskey-Poster.jpg'

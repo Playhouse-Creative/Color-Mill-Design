@@ -46,11 +46,11 @@ const ContactForm = props => {
             data-netlify="true"
             netlify-honeypot="bot-field"
           >
-            <input type="hidden" name="form-name" value="Design Contact Form" />
+            <input type="hidden" name="form-name" value="Design Contact Form" aria-label="Contact Form" />
             <p hidden>
               <label>
                 Don't fill this out:
-                <input name="bot-field"></input>
+                <input name="bot-field" aria-label="Do not fill this out"></input>
               </label>
             </p>
             <Grid item className={classes.textField}>
