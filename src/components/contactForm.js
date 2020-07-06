@@ -72,7 +72,7 @@ const ContactForm = props => {
                 fullWidth
                 id="outlined-required"
                 label="Your Email:"
-                placeholder="email address"
+                placeholder="Email address"
                 variant="outlined"
                 type="email"
                 name="email"
