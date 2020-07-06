@@ -61,7 +61,7 @@ const ContactForm = props => {
                 label="Your Name:"
                 placeholder="Who are you?"
                 variant="outlined"
-                type="name"
+                type="text"
                 name="name"
                 autoComplete="name"
               />
