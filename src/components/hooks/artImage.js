@@ -11,7 +11,7 @@ const ArtImage = ({ src, ...props }) => {
                 relativePath
                 childImageSharp {
                 fluid(maxWidth: 900) {
-                    ...GatsbyImageSharpFluid_tracedSVG
+                    ...GatsbyImageSharpFluid_withWebp
                 }
                 }
             }
