@@ -49,7 +49,7 @@ const ContactForm = props => {
             <input type="hidden" name="form-name" value="Design Contact Form" />
             <p hidden>
               <label>
-                Don't fill this out:{' '}
+                Don't fill this out:
                 <input name="bot-field" value="Design Contact Form"></input>
               </label>
             </p>
