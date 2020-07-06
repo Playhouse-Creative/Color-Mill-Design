@@ -4,7 +4,7 @@ import { useSpring, animated } from 'react-spring'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 import BourbonStill from '../images/Animated-Whiskey-Poster.jpg'
-import BourbonVideo from '../images/Animated-Whiskey.mp4'
+import BourbonVideo from '../images/video/Animated-Whiskey.mp4'
 import ArtImage from './hooks/artImage.js'
 
 const useStyles = makeStyles(theme => ({

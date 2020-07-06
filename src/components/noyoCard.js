@@ -1,9 +1,8 @@
 import React from 'react'
-import Image from 'gatsby'
 import { makeStyles, Grid, Modal, Backdrop, Fade } from '@material-ui/core'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
-import NoyoVideo from '../images/Animated-Noyo.mp4'
+import NoyoVideo from '../images/video/Animated-Noyo.mp4'
 import NoyoStill from '../images/Animated-Noyo-Poster.jpg'
 import ArtImage from './hooks/artImage.js'
 

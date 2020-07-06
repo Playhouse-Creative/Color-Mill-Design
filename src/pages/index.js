@@ -1,49 +1,13 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { makeStyles, Grid } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import BourbonCard from '../components/bourbonCard.js'
 import NoyoCard from '../components/noyoCard.js'
 import UMSPCard from '../components/uMSPCard.js'
 import LogosCard from '../components/logosCard.js'
 
-const useStyles = makeStyles(theme => ({
-  indexRoot: {
-    backgroundColor: theme.palette.background.paper,
-    borderRadius: 60,
-    margin: '-.5rem -1rem 0 -.5rem',
-    outline: 0,
-    maxHeight: '500px',
 
-    nested: {
-      paddingLeft: theme.spacing(4),
-    },
-  },
-  indexPortrait: {
-    margin: '0 0 0 3rem',
-    width: '100%',
-    outline: 0,
-  },
-  indexCaption: {
-    width: '100%',
-    backgroundColor: theme.palette.background.paper,
-    borderRadius: '0% 0% 60px 60px',
-    margin: 0,
-  },
-  indexModal: {
-    width: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    outline: 0,
-  },
-  indexPaper: {
-    backgroundColor: theme.palette.background.paper,
-    boxShadow: theme.shadows[5],
-    outline: 0,
-  },
-}))
 
 const IndexPage = props => {
   return (

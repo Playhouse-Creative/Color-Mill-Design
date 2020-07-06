@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Graphic and Web Design created at Color Mill Design`,
+    title: `Graphic Design and Web Design created at Color Mill Design`,
     description: `A design Studio specializing in delightful branding and web experiences`,
     author: `hello@mycolormill.com`,
   },

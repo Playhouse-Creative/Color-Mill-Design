@@ -41,7 +41,6 @@ const ContactForm = (props) => {
     </Grid>
     <Grid item className={classes.paper}>
     <form name="Design Contact Form" method="POST" data-netlify="true" netlify-honeypot="bot-field" > 
-        <input type="hidden" name="contactForm" value="Design Contact Form" />
         <Grid item className={classes.textField}>
             <TextField
             type='hidden'

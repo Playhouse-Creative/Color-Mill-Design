@@ -12,7 +12,6 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Grid from '@material-ui/core/Grid'
 import List from '@material-ui/core/List'
 import Hidden from '@material-ui/core/Hidden'
-import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
@@ -24,7 +23,6 @@ import ListItemText from '@material-ui/core/ListItemText'
 import HomeIcon from '@material-ui/icons/Home'
 import ListIcon from '@material-ui/icons/ViewList'
 import InstagramIcon from '@material-ui/icons/Instagram'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import logo from '../images/Color-Mill-Animated-Logo-Loop01.gif'
 
 const drawerWidth = 240
@@ -205,7 +203,7 @@ const Header = ({ siteTitle }) => {
               <ListItemText>Contact</ListItemText>
             </ListItem>
           </Link>
-          <a href="https://www.instagram.com/the_colormill" target="_blank">
+          <a href="https://www.instagram.com/the_colormill" target="_blank" rel="noreferrer">
             <ListItem>
               <ListItemIcon>
                 <InstagramIcon />

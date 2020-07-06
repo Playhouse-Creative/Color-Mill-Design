@@ -3,7 +3,7 @@ import { makeStyles, Grid } from '@material-ui/core'
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
 // import { Carousel } from 'react-responsive-carousel';
 import UMSPStill from '../images/Animated-UMSP-Poster.jpg'
-import UMSPVideo from '../images/Animated-UMSP.mp4'
+import UMSPVideo from '../images/video/Animated-UMSP.mp4'
 // import ArtImage from './hooks/artImage.js'
 
 const useStyles = makeStyles(theme => ({

@@ -2,50 +2,12 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import ContactForm from '../components/contactForm'
-import { makeStyles, useTheme, useMediaQuery, Grid, Box } from '@material-ui/core'
-import Img from 'gatsby-image'
 
 
-const useStyles = makeStyles(theme => ({
-  contactRoot: {
-    width: 'auto',
-    backgroundColor: theme.palette.background.paper,
-    borderRadius: 60,
-    margin: '-3rem 0 0 -3rem',
-    objectFit:'contain',
-  nested: {
-    paddingLeft: theme.spacing(4),
-  },
-},
-  contactPaper: {
-    backgroundColor: theme.palette.background.paper,
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-    width: '600px',
-    outline: 0
-  },
-  contactPortrait: {
-    minHeight: 288
-  },
-}))
+
 
 
 const ContactPage = (props) => {
-
-  const classes = useStyles()
-
-  const sources = [
-    props.data.leftPortrait.childImageSharp.fluid,
-    {
-      ...props.data.topPortrait.childImageSharp.fluid,
-      media: `(max-width: 959px)`,
-    },
-  ]
-
-  const theme = useTheme();
-
-  const isSmall = useMediaQuery(theme.breakpoints.down('sm'))
 
   return(
     <>

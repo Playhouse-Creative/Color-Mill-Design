@@ -3,7 +3,7 @@ import { makeStyles, Grid, Modal, Backdrop, Fade, } from '@material-ui/core'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import PaintingsStill from '../images/Animated-Paintings-Poster.jpg'
-import PaintingsVideo from '../images/Animated-Paintings.mp4'
+import PaintingsVideo from '../images/video/Animated-Paintings.mp4'
 import ArtImage from './hooks/artImage.js'
 
 const useStyles = makeStyles(theme => ({
