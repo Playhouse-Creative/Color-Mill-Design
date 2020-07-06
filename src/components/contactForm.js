@@ -42,7 +42,7 @@ const ContactForm = props => {
         <Grid item className={classes.paper}>
           <form
             name="Design Contact Form"
-            method="POST"
+            method="post"
             data-netlify="true"
             netlify-honeypot="bot-field"
           >
