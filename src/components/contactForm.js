@@ -50,7 +50,7 @@ const ContactForm = props => {
             <p hidden>
               <label>
                 Don't fill this out:
-                <input name="bot-field" value="Design Contact Form"></input>
+                <input name="bot-field"></input>
               </label>
             </p>
             <Grid item className={classes.textField}>
