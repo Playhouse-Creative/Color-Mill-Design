@@ -90,6 +90,7 @@ const useStyles = makeStyles(theme => ({
   },
   menuListItem: {
     color: 'white',
+    fontSize: '1.5rem',
   },
 }))
 
@@ -148,6 +149,13 @@ const Header = ({ siteTitle }) => {
                       </ListItemText>
                     </ListItem>
                   </Link>
+                  <a href="https://www.instagram.com/the_colormill" target="_blank" rel="noreferrer">
+            <ListItem>
+              <ListItemIcon>
+                <InstagramIcon style={{ color:'white'}}/>
+              </ListItemIcon>
+            </ListItem>
+          </a>
                 </List>
               </Grid>
             </Hidden>
