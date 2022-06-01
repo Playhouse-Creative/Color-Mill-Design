@@ -35,7 +35,7 @@
     "react-spring": "^8.0.27",
     "react-swipeable-views": "^0.13.9",
     "react-transition-group": "^4.4.1",
-    "sharp": "^0.25.4",
+    "sharp": "^0.30.5",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.1.1",
     "typeface-roboto": "0.0.54",
